@@ -48,7 +48,7 @@ const Login: React.FC = () => {
                 rules={[
                     { required: true, message: 'Пожалуйста, введите ваше проль!' },
                     { whitespace: true },
-                    { min: 8, message: 'Пароль должен быть не меньше 8 символов' },
+                    { min: 5, message: 'Пароль должен быть не меньше 8 символов' },
                     { max: 16, message: 'Слишком длинное пароль' }
                 ]}
                 hasFeedback

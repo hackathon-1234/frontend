@@ -21,7 +21,7 @@ export const PostAPI = {
 
 export const AuthAPI = {
     login: async (data: LoginDto): Promise<AxiosResponse<IAuthUser>> => {
-        return $api.post<IAuthUser>('/login', data)
+        return $api.post<IAuthUser>('/token', data)
     },
     registration: async (data: RegistrationDto): Promise<AxiosResponse<IAuthUser>> => {
         return $api.post<IAuthUser>('/registration')
