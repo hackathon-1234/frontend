@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Upload, Button, Input } from 'antd';
+import { Upload, Button, Input, Typography } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import { UploadChangeParam, UploadFile } from 'antd/lib/upload/interface';
 
@@ -25,7 +25,10 @@ const CreateManual: React.FC = () => {
    };
 
    return (
-      <div>
+      <div style={{
+         width: '550px'
+      }}>
+         <Typography.Title level={2}>Доваить материал</Typography.Title>
          <TextArea value={textValue} onChange={handleTextChange} />
          <Upload multiple={true} beforeUpload={() => false} onChange={handleFileChange}>
             <Button icon={<UploadOutlined />} style={{ marginTop: '10px' }}>

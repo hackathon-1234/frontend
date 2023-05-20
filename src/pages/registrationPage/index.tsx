@@ -1,9 +1,9 @@
-import {theme, Typography} from "antd";
+import { theme, Typography } from "antd";
 import Registration from "../../components/Registration";
 import CreateManual from "../../components/CreateManual";
 import { Divider } from 'antd';
 import Login from "../../components/login";
-import {Content} from "antd/es/layout/layout";
+import { Content } from "antd/es/layout/layout";
 import React from "react";
 
 const RegistrationPage = () => {
@@ -19,7 +19,11 @@ const RegistrationPage = () => {
                 justifyContent: "center",
                 height: "100vh"
             }}>
-                <div className="site-layout-content" style={{ background: colorBgContainer, width: 550 , padding: "50px 50px"  }}>
+                <div className="site-layout-content" style={{
+                    background: colorBgContainer,
+                    width: '550px', 
+                    padding: "50px 50px"
+                }}>
                     <Typography.Title>Регистрация</Typography.Title>
                     <Registration />
                 </div>
