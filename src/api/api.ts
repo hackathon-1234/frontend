@@ -30,3 +30,9 @@ export const AuthAPI = {
         return $api.post('/logout');
     }
 }
+
+export const FooAPI = {
+    foo: async () => {
+        return $api.get<IAuthUser>('/hello')
+    },
+}

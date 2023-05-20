@@ -1,12 +1,18 @@
 import Login from "../../components/login";
-import {theme, Typography} from "antd";
+import {Button, theme, Typography} from "antd";
 import {Content} from "antd/es/layout/layout";
+import {FooAPI} from "../../api/api";
 
 
 const LoginPage = () => {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
+
+    const check = async () => {
+        const data = await FooAPI.foo();
+        console.log(data.data)
+    }
 
     return (
         <>
@@ -20,6 +26,7 @@ const LoginPage = () => {
                     <Typography.Title>
                         Данные для входа
                     </Typography.Title>
+                    <Button onClick={check}>Проверить</Button>
                     <Login />
                 </div>
             </Content>
