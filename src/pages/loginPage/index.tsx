@@ -1,15 +1,17 @@
-import React from "react";
 import Login from "../../components/login";
-import {Typography} from "antd";
+import { Typography } from "antd";
+import { Divider } from 'antd';
 
 
 const LoginPage = () => {
 
-    return(
+    return (
         <>
-            <Typography.Title>
+            <Divider>
+                <Typography.Title>
                 Данные для входа
-            </Typography.Title>
+                </Typography.Title>
+            </Divider>
             <Login />
         </>
     )
