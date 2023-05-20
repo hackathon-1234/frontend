@@ -15,9 +15,10 @@ const AddQuestion: React.FC<IAddQuestion> = (props) => {
 
     return(
         <div style={{
-            border: "2px solid #eee",
+            border: "2px solid #8f8f8f",
             borderRadius: '10px',
-            padding: '15px'
+            padding: '15px',
+            marginTop: "15px"
         }}>
             <Form.Item
                 label={"Вопрос"}
