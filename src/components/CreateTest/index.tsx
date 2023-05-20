@@ -13,6 +13,7 @@ const cityData = {
 type CityName = keyof typeof cityData;
 
 interface IQuestion {
+    indexItem: number;
     name: string;
     isCorrect: number;
     answers: string[];
@@ -38,7 +39,8 @@ const CreateTest: React.FC = () => {
             return [
                 ...prevState,
                 {
-                    name: `Вопрос ${questionCounter + 1}`,
+                    indexItem: questionCounter + 1,
+                    name: "",
                     isCorrect: null,
                     answers: [],
                 }
@@ -50,6 +52,8 @@ const CreateTest: React.FC = () => {
     const changeQuestionAnswer = (index: number, name: string, value: string) => {
         const data = questions.filter(elem => elem.name === name)[0];
 
+        console.log(data)
+
         data.answers[index] = value;
 
         setQuestions(prevState => {
@@ -60,30 +64,28 @@ const CreateTest: React.FC = () => {
         })
     }
 
-    const changeQuestionName = (name: string, value: string) => {
-        const data = questions.filter(elem => elem.name === name)[0];
+    const changeQuestionName = (indexItem: number, value: string) => {
+        const dataQuestions = questions;
+        dataQuestions.forEach(elem => {
+            if (elem.indexItem === indexItem) {
+                elem.name = value;
+            }
+        });
 
-        data.name = value;
+        console.log(dataQuestions)
 
-        setQuestions(prevState => {
-            return [
-                ...prevState.filter(elem => elem.name !== name),
-                data
-            ]
-        })
+        setQuestions([...dataQuestions])
     }
 
-    const changeQuestionIsCorrect = (name: string, value: number) => {
-        const data = questions.filter(elem => elem.name === name)[0];
+    const changeQuestionIsCorrect = (indexItem: number, value: number) => {
+        const dataQuestions = questions;
+        dataQuestions.forEach(elem => {
+            if (elem.indexItem === indexItem) {
+                elem.isCorrect = +value;
+            }
+        });
 
-        data.isCorrect = +value;
-
-        setQuestions(prevState => {
-            return [
-                ...prevState.filter(elem => elem.name !== name),
-                data
-            ]
-        })
+        setQuestions([...dataQuestions])
     }
 
     const submitTest = () => {
@@ -117,13 +119,14 @@ const CreateTest: React.FC = () => {
                         questionCounter !== 0 ? (
                             <>
                                 {
-                                    questions.map(elem => (
+                                    questions.map((elem, index) => (
                                         <>
                                             <AddQuestion
-                                                key={elem.name}
+                                                key={index}
                                                 name={elem.name}
                                                 isCorrect={elem.isCorrect}
                                                 answers={elem.answers}
+                                                indexItem={elem.indexItem}
                                                 changeQuestionAnswer={changeQuestionAnswer}
                                                 changeQuestionName={changeQuestionName}
                                                 changeQuestionIsCorrect={changeQuestionIsCorrect}

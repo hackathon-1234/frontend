@@ -2,12 +2,13 @@ import React from 'react';
 import {Button, Checkbox, Col, Form, Input, Select, Typography} from 'antd';
 
 interface IAddQuestion {
+    indexItem: number;
     name: string;
     isCorrect: number;
     answers: string[];
     changeQuestionAnswer(index: number, name: string, value: string): void;
-    changeQuestionName(name: string, value: string): void;
-    changeQuestionIsCorrect(name: string, value: number): void;
+    changeQuestionName(indexItem: number, value: string): void;
+    changeQuestionIsCorrect(indexItem: number, value: number): void;
 }
 
 const AddQuestion: React.FC<IAddQuestion> = (props) => {
@@ -19,13 +20,13 @@ const AddQuestion: React.FC<IAddQuestion> = (props) => {
             padding: '15px'
         }}>
             <Form.Item
-                label={"Сюда пишим вопрос"}
+                label={"Вопрос"}
             >
                 <Input
                     value={props.name}
                     onChange={(
                         e
-                    ) => props.changeQuestionName(props.name, e.target.value)}
+                    ) => props.changeQuestionName(props.indexItem, e.target.value)}
                 />
             </Form.Item>
             <Form.Item
@@ -35,7 +36,7 @@ const AddQuestion: React.FC<IAddQuestion> = (props) => {
                     value={props.isCorrect}
                     onChange={(
                         e
-                    ) => props.changeQuestionIsCorrect(props.name, +e.target.value)}
+                    ) => props.changeQuestionIsCorrect(props.indexItem, +e.target.value)}
                 />
             </Form.Item>
             <Form.Item
