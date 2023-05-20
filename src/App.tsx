@@ -5,6 +5,9 @@ import Posts from "./components/Posts";
 import {useAppDispatch, useAppSelector} from "./hooks/useRedux";
 import {checkAuth} from "./store/slices/auth/ActionCreators";
 import {Typography} from "antd";
+import {Route, Routes} from "react-router-dom";
+import LoginPage from "./pages/loginPage";
+import RegistrationPage from "./pages/registrationPage";
 
 function App() {
     const {isLoading} = useAppSelector(state => state.auth)
@@ -24,6 +27,12 @@ function App() {
     <div className="App">
         <Counter />
         <Posts />
+
+        <Routes>
+            <Route path={"/"} element={<h1>Foo</h1>} />
+            <Route path={"/login"} element={<LoginPage />} />
+            <Route path={"/registration"} element={<RegistrationPage />} />
+        </Routes>
     </div>
   );
 }
