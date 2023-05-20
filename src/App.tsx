@@ -30,8 +30,8 @@ function App() {
       <Posts />
 
       <nav>
-        <Link to='/login'>Login</Link>
-        <Link to='/registration'>Registration</Link>
+        <Link to='/login'>Логин</Link>
+        <Link to='/registration'>Регистрация</Link>
       </nav>
 
       <Routes>
