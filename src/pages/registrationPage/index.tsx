@@ -19,7 +19,7 @@ const RegistrationPage = () => {
                 justifyContent: "center",
                 height: "100vh"
             }}>
-                <div className="site-layout-content" style={{ background: colorBgContainer, padding: "50px 50px"  }}>
+                <div className="site-layout-content" style={{ background: colorBgContainer, width: 550 , padding: "50px 50px"  }}>
                     <Typography.Title>Регистрация</Typography.Title>
                     <Registration />
                 </div>

@@ -1,7 +1,12 @@
 .ant-layout-header.css-dev-only-do-not-override-15rg2km {
-    background-color: #7ed957;
+    background-color: #3ca011;
 }
 
+.exitButton:hover{
+    color: #000;
+    background-color: #3ca011;
+    opacity: .8;
+}
 .ant-menu-overflow-item.ant-menu-item.ant-menu-item-selected {
     background-color: transparent;
     color: rgba(16, 146, 255, 0.91);
