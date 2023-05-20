@@ -1,7 +1,7 @@
 import axios from "axios";
 import {IAuthUser} from "../types/AuthUser";
 
-export const API_URL = 'http://localhost:5000'
+export const API_URL = 'http://localhost:3005/back'
 
 const $api = axios.create({
     baseURL: API_URL,
