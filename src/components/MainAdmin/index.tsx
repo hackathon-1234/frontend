@@ -4,6 +4,8 @@ import { MenuInfo } from 'rc-menu/lib/interface';
 import {Link} from "react-router-dom"
 import CreateTest from "../CreateTest";
 
+import "./style.css";
+
 const {Header, Content, Footer} = Layout;
 
 const MainAdmin: React.FC = () => {
