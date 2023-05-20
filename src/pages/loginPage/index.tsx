@@ -22,7 +22,11 @@ const LoginPage = () => {
                 justifyContent: "center",
                 height: "100vh"
             }}>
-                <div className="site-layout-content" style={{ background: colorBgContainer, padding: "50px 50px"  }}>
+                <div className="site-layout-content" style={{
+                    width: '550px',
+                    background: colorBgContainer,
+                    padding: "50px 50px"
+                }}>
                     <Typography.Title>
                         Данные для входа
                     </Typography.Title>
