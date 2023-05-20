@@ -1,5 +1,7 @@
 import {theme, Typography} from "antd";
 import Registration from "../../components/Registration";
+import CreateManual from "../../components/CreateManual";
+import { Divider } from 'antd';
 import Login from "../../components/login";
 import {Content} from "antd/es/layout/layout";
 import React from "react";

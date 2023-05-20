@@ -26,7 +26,8 @@ const Registration: React.FC = () => {
             name="lastName"
             rules={[
                { required: true, message: 'Введите имя!' },
-               { whitespace: true, message:'Пробел не допускается'},
+               { whitespace: true, message: 'Пробел не допускается' },
+               { min: 3, message: 'Имя должно быть не меньше 3 символов' },
                { max: 29, message: 'Слишком длинная имя!' }]}
             hasFeedback
          >
@@ -38,7 +39,8 @@ const Registration: React.FC = () => {
             name="firstName"
             rules={[
                { required: true, message: 'Введите фамилию!' },
-               { whitespace: true, message:'Пробел не допускается'},
+               { whitespace: true, message: 'Пробел не допускается' },
+               { min: 3, message: 'Фамилия должно быть не меньше 3 символов' },
                { max: 29, message: 'Слишком длинная фамилия!' }]}
             hasFeedback
          >
@@ -49,7 +51,8 @@ const Registration: React.FC = () => {
             name="surtName"
             rules={[
                { required: true, message: 'Введите отчество!' },
-               { whitespace: true, message:'Пробел не допускается'},
+               { whitespace: true, message: 'Пробел не допускается' },
+               { min: 3, message: 'Отчество должно быть не меньше 3 символов' },
                { max: 29, message: 'Слишком длиное отчество!' }]}
             hasFeedback
          >
@@ -60,7 +63,8 @@ const Registration: React.FC = () => {
             name="login"
             rules={[
                { required: true, message: 'Введите имя пользователя!' },
-               { whitespace: true, message:'Пробел не допускается'},
+               { whitespace: true, message: 'Пробел не допускается' },
+               { min: 3, message: 'Имя пользователя должно быть не меньше 3 символов' },
                { max: 29, message: 'Слишком длинная имя пользователя' }]}
             hasFeedback
          >
@@ -71,7 +75,7 @@ const Registration: React.FC = () => {
             name="email"
             rules={[
                { required: true, message: 'Введите e-mail!' },
-               { whitespace: true, message:'Пробел не допускается'},
+               { whitespace: true, message: 'Пробел не допускается' },
                { type: 'email', message: 'Введите корректный e-mail!' }]}
             hasFeedback
          >
@@ -83,7 +87,7 @@ const Registration: React.FC = () => {
             rules={[
                { required: true, message: 'Введите пароль!' },
                { min: 8, message: 'Минимальное количество символов 8' },
-               { whitespace: true, message:'Пробел не допускается'},
+               { whitespace: true, message: 'Пробел не допускается' },
                { max: 16, message: 'Максимальное количество символов 16' },]}
             hasFeedback
          >
@@ -96,6 +100,7 @@ const Registration: React.FC = () => {
             </Button>
          </Form.Item>
       </Form>
+         
    )
 };
 

@@ -1,4 +1,3 @@
-import React from "react";
 import Login from "../../components/login";
 import {theme, Typography} from "antd";
 import {Content} from "antd/es/layout/layout";
@@ -9,7 +8,7 @@ const LoginPage = () => {
         token: { colorBgContainer },
     } = theme.useToken();
 
-    return(
+    return (
         <>
             <Content style={{
                 display: "flex",

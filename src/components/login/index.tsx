@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 
 const Login: React.FC = () => {
     const onFinish = (values: any) => {
@@ -10,7 +10,7 @@ const Login: React.FC = () => {
         console.log('Failed:', errorInfo);
     };
 
-    return(
+    return (
         <Form
             name="basic"
             labelCol={{ span: 8 }}
@@ -39,7 +39,7 @@ const Login: React.FC = () => {
                 label="Пароль"
                 name="password"
                 rules={[
-                    { required: true, message: 'Пожалуйста, введите ваше проль!'},
+                    { required: true, message: 'Пожалуйста, введите ваше проль!' },
                     { whitespace: true },
                     { min: 8, message: 'Пароль должен быть не меньше 8 символов' },
                     { max: 16, message: 'Слишком длинное пароль' }
