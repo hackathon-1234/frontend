@@ -1,14 +1,11 @@
 import React from 'react';
-import './App.css';
-import Counter from "./components/Counter";
-import Posts from "./components/Posts";
-import { useAppDispatch, useAppSelector } from "./hooks/useRedux";
-import { checkAuth } from "./store/slices/auth/ActionCreators";
-import { Typography } from "antd";
-import { Route, Routes } from "react-router-dom";
+import {useAppDispatch, useAppSelector} from "./hooks/useRedux";
+import {checkAuth} from "./store/slices/auth/ActionCreators";
+import {Typography} from "antd";
+import {Route, Routes} from "react-router-dom";
 import LoginPage from "./pages/loginPage";
 import RegistrationPage from "./pages/registrationPage";
-import { Link } from 'react-router-dom';
+import AdminPage from "./pages/adminPage";
 
 function App() {
   const { isLoading } = useAppSelector(state => state.auth)
@@ -25,21 +22,12 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Counter />
-      <Posts />
-
-      <nav>
-        <Link to='/login'>Логин</Link>
-        <Link to='/registration'>Регистрация</Link>
-      </nav>
-
       <Routes>
-        <Route path={"/"} element={<h1>Foo</h1>} />
-        <Route path={"/login"} element={<LoginPage />} />
-        <Route path={"/registration"} element={<RegistrationPage />} />
+          <Route path={"/"} element={<h1>Foo</h1>} />
+          <Route path={"/login"} element={<LoginPage />} />
+          <Route path={"/registration"} element={<RegistrationPage />} />
+          <Route path={"/admin"} element={<AdminPage />} />
       </Routes>
-    </div>
   );
 }
 

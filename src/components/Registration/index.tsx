@@ -91,8 +91,8 @@ const Registration: React.FC = () => {
          </Form.Item>
 
          <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button block type="primary" htmlType="submit">
-               Отправить
+            <Button type="primary" htmlType="submit">
+                Зарегистрироваться
             </Button>
          </Form.Item>
       </Form>

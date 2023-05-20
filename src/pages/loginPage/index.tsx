@@ -1,16 +1,29 @@
 import React from "react";
 import Login from "../../components/login";
-import {Typography} from "antd";
+import {theme, Typography} from "antd";
+import {Content} from "antd/es/layout/layout";
 
 
 const LoginPage = () => {
+    const {
+        token: { colorBgContainer },
+    } = theme.useToken();
 
     return(
         <>
-            <Typography.Title>
-                Данные для входа
-            </Typography.Title>
-            <Login />
+            <Content style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "100vh"
+            }}>
+                <div className="site-layout-content" style={{ background: colorBgContainer, padding: "50px 50px"  }}>
+                    <Typography.Title>
+                        Данные для входа
+                    </Typography.Title>
+                    <Login />
+                </div>
+            </Content>
         </>
     )
 }
