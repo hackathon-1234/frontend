@@ -10,8 +10,12 @@ const LoginPage = () => {
     } = theme.useToken();
 
     const check = async () => {
-        const data = await FooAPI.foo();
-        console.log(data.data)
+        try {
+            const data = await FooAPI.foo();
+            console.log(data.data)
+        } catch (e) {
+            console.log(e)
+        }
     }
 
     return (
