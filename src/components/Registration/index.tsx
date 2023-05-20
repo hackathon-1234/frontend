@@ -27,6 +27,7 @@ const Registration: React.FC = () => {
             rules={[
                { required: true, message: 'Введите имя!' },
                { whitespace: true, message:'Пробел не допускается'},
+               {min: 3, message: 'Имя должно быть не меньше 3 символов'},
                { max: 29, message: 'Слишком длинная имя!' }]}
             hasFeedback
          >
@@ -39,6 +40,7 @@ const Registration: React.FC = () => {
             rules={[
                { required: true, message: 'Введите фамилию!' },
                { whitespace: true, message:'Пробел не допускается'},
+               {min: 3, message: 'Фамилия должно быть не меньше 3 символов'},
                { max: 29, message: 'Слишком длинная фамилия!' }]}
             hasFeedback
          >
@@ -50,6 +52,7 @@ const Registration: React.FC = () => {
             rules={[
                { required: true, message: 'Введите отчество!' },
                { whitespace: true, message:'Пробел не допускается'},
+               {min: 3, message: 'Отчество должно быть не меньше 3 символов'},
                { max: 29, message: 'Слишком длиное отчество!' }]}
             hasFeedback
          >
@@ -61,6 +64,7 @@ const Registration: React.FC = () => {
             rules={[
                { required: true, message: 'Введите имя пользователя!' },
                { whitespace: true, message:'Пробел не допускается'},
+               {min: 3, message: 'Имя пользователя должно быть не меньше 3 символов'},
                { max: 29, message: 'Слишком длинная имя пользователя' }]}
             hasFeedback
          >
