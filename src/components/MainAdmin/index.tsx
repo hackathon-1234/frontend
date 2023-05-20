@@ -57,7 +57,7 @@ const MainAdmin: React.FC = () => {
                     right: "5%",
                 }}>
                     <Link className='exitButton' style={{
-                        color: '#3ca011',
+                        color: '#66fc11',
                         backgroundColor: '#000',
                         fontSize: '18px',
                         fontWeight: '700',
@@ -68,13 +68,21 @@ const MainAdmin: React.FC = () => {
                     }} to='/login'>Выход</Link>
                 </div>
             </Header>
-            <Content style={{ padding: '0 50px' }}>
-                <div className="site-layout-content" style={{ background: colorBgContainer, margin: '16px 0', padding: "50px" }}>
-                    {selectedMenu === "1" && <CreateTest />}
-                    {selectedMenu === "2" && (<CreateManual/>)}
-                </div>
-            </Content>
-        </Layout>
+            <Content style={{
+                padding: '0 50px',
+            }}>
+                <div className="site-layout-content" style={{
+                    background: colorBgContainer,
+                    margin: '56px 0 16px 0',
+                    padding: "50px",
+                    borderRadius: '10px',
+                    boxShadow: '18px 18px 36px #BCBCBC, -18px -18px 36px #FFFFFF'
+                    }}>
+                {selectedMenu === "1" && <CreateTest />}
+                {selectedMenu === "2" && (<CreateManual />)}
+            </div>
+        </Content>
+        </Layout >
     );
 };
 

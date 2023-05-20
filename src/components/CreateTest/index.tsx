@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {Button, Checkbox, Col, Form, Input, Select, Typography} from 'antd';
+import React, { useState } from 'react';
+import { Button, Checkbox, Col, Form, Input, Select, Typography } from 'antd';
 import AddQuestion from "../AddQuestion";
-import {useAppSelector} from "../../hooks/useRedux";
+import { useAppSelector } from "../../hooks/useRedux";
 import addQuestion from "../AddQuestion";
 
 
@@ -91,7 +91,7 @@ const CreateTest: React.FC = () => {
     }
 
 
-    return(
+    return (
         <>
             <Typography.Title>Создание теста</Typography.Title>
             <Form>
@@ -112,14 +112,13 @@ const CreateTest: React.FC = () => {
                     Добавить вопрос
                 </Button>
 
-                <div style={{marginTop: "15px"}}>
+                <div style={{ marginTop: "15px" }}>
                     {
                         questionCounter !== 0 ? (
                             <>
                                 {
                                     questions.map(elem => (
                                         <>
-                                            <hr />
                                             <AddQuestion
                                                 key={elem.name}
                                                 name={elem.name}
@@ -129,7 +128,6 @@ const CreateTest: React.FC = () => {
                                                 changeQuestionName={changeQuestionName}
                                                 changeQuestionIsCorrect={changeQuestionIsCorrect}
                                             />
-                                            <hr />
                                         </>
                                     ))
                                 }

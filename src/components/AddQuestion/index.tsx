@@ -13,7 +13,11 @@ interface IAddQuestion {
 const AddQuestion: React.FC<IAddQuestion> = (props) => {
 
     return(
-        <>
+        <div style={{
+            border: "2px solid #eee",
+            borderRadius: '10px',
+            padding: '15px'
+        }}>
             <Form.Item
                 label={"Сюда пишим вопрос"}
             >
@@ -74,7 +78,7 @@ const AddQuestion: React.FC<IAddQuestion> = (props) => {
                     ) => props.changeQuestionAnswer(3, props.name, e.target.value)}
                 />
             </Form.Item>
-        </>
+        </div>
     )
 }
 

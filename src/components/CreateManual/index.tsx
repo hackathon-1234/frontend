@@ -29,7 +29,7 @@ const CreateManual: React.FC = () => {
          width: '550px'
       }}>
          <Typography.Title level={2}>Доваить материал</Typography.Title>
-         <TextArea value={textValue} onChange={handleTextChange} />
+         <TextArea value={textValue} rows={6} onChange={handleTextChange} />
          <Upload multiple={true} beforeUpload={() => false} onChange={handleFileChange}>
             <Button icon={<UploadOutlined />} style={{ marginTop: '10px' }}>
                Select Files
