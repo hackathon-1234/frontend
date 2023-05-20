@@ -26,9 +26,9 @@ const MainAdmin: React.FC = () => {
                     color: "#fff",
                     padding: '0 15px',
                     fontSize: '23px',
-                    width: '150px',
+                    width: '165px',
                     fontWeight: '900',
-                }} className="demo-logo">Skill Bost</div>
+                }} className="demo-logo">Skill Boost</div>
                 <Menu
                     theme="dark"
                     mode="horizontal"
