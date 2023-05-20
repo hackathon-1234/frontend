@@ -14,6 +14,7 @@ export const login = (data: LoginDto) => async (dispatch: AppDispatch) => {
         localStorage.setItem("token", response.data.accessToken)
         dispatch(setAuth(true))
         dispatch(setUser(response.data))
+        console.log(response.data)
     } catch (e) {
         console.dir(e)
     }

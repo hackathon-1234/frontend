@@ -1,8 +1,15 @@
 import React from 'react';
 import { Button, Form, Input } from 'antd';
+import {useAppDispatch} from "../../hooks/useRedux";
+import {login} from "../../store/slices/auth/ActionCreators";
+import {LoginDto} from "../../dto/loginDto";
 
 const Login: React.FC = () => {
-    const onFinish = (values: any) => {
+    const dispatch = useAppDispatch();
+
+
+    const onFinish = (values: LoginDto) => {
+        dispatch(login(values))
         console.log('Success:', values);
     };
 
