@@ -1,13 +1,15 @@
-import {Button, Typography} from "antd";
-import React from "react";
-import {useAppDispatch, useAppSelector} from "../../hooks/useRedux";
-import {fetchPosts} from "../../store/slices/post/ActionCreators";
+import { Typography } from "antd";
+import Registration from "../../components/Registration";
+const { Title } = Typography;
 
 const RegistrationPage = () => {
 
-    return(
+    return (
         <>
-            <Typography>REGISTRATION</Typography>
+            <Typography>
+                <Title>Регистрация</Title>
+            </Typography>
+            <Registration />
         </>
     )
 }
