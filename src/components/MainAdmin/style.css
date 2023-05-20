@@ -9,6 +9,6 @@
 }
 .ant-menu-overflow-item.ant-menu-item.ant-menu-item-selected {
     background-color: transparent;
-    color: rgba(16, 146, 255, 0.91);
-    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.91);
+    /* text-decoration: underline; */
 }

@@ -4,6 +4,7 @@ import { MenuInfo } from 'rc-menu/lib/interface';
 import { Link } from "react-router-dom"
 import CreateTest from "../CreateTest";
 import "./style.css";
+import CreateManual from '../CreateManual';
 
 const { Header, Content, Footer } = Layout;
 
@@ -25,6 +26,7 @@ const MainAdmin: React.FC = () => {
                     color: "#fff",
                     padding: '0 15px',
                     fontSize: '23px',
+                    width: '150px',
                     fontWeight: '900',
                 }} className="demo-logo">Skill Bost</div>
                 <Menu
@@ -33,10 +35,10 @@ const MainAdmin: React.FC = () => {
                     defaultSelectedKeys={['1']}
                     onClick={(e) => foo(e)}
                     style={{
-                        color: '#000',
+                        color: '#454545',
                         backgroundColor: 'transparent',
+                        width: '100%',
                         fontWeight: 700,
-                        minWidth: 'auto',
                         fontSize: '16px'
                     }}
                     items={[
@@ -69,7 +71,7 @@ const MainAdmin: React.FC = () => {
             <Content style={{ padding: '0 50px' }}>
                 <div className="site-layout-content" style={{ background: colorBgContainer, margin: '16px 0', padding: "50px" }}>
                     {selectedMenu === "1" && <CreateTest />}
-                    {selectedMenu === "2" && (<h1>Добавить материал</h1>)}
+                    {selectedMenu === "2" && (<CreateManual/>)}
                 </div>
             </Content>
         </Layout>
