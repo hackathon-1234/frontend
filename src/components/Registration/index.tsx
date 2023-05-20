@@ -26,7 +26,9 @@ const Registration: React.FC = () => {
             name="lastName"
             rules={[
                { required: true, message: 'Введите имя!' },
+               { whitespace: true, message:'Пробел не допускается'},
                { max: 29, message: 'Слишком длинная имя!' }]}
+            hasFeedback
          >
             <Input />
          </Form.Item>
@@ -36,7 +38,9 @@ const Registration: React.FC = () => {
             name="firstName"
             rules={[
                { required: true, message: 'Введите фамилию!' },
+               { whitespace: true, message:'Пробел не допускается'},
                { max: 29, message: 'Слишком длинная фамилия!' }]}
+            hasFeedback
          >
             <Input />
          </Form.Item>
@@ -45,7 +49,9 @@ const Registration: React.FC = () => {
             name="surtName"
             rules={[
                { required: true, message: 'Введите отчество!' },
+               { whitespace: true, message:'Пробел не допускается'},
                { max: 29, message: 'Слишком длиное отчество!' }]}
+            hasFeedback
          >
             <Input />
          </Form.Item>
@@ -54,7 +60,9 @@ const Registration: React.FC = () => {
             name="login"
             rules={[
                { required: true, message: 'Введите имя пользователя!' },
+               { whitespace: true, message:'Пробел не допускается'},
                { max: 29, message: 'Слишком длинная имя пользователя' }]}
+            hasFeedback
          >
             <Input />
          </Form.Item>
@@ -63,8 +71,9 @@ const Registration: React.FC = () => {
             name="email"
             rules={[
                { required: true, message: 'Введите e-mail!' },
-               { type: 'email', message: 'Введите корректный e-mail!' }
-            ]}
+               { whitespace: true, message:'Пробел не допускается'},
+               { type: 'email', message: 'Введите корректный e-mail!' }]}
+            hasFeedback
          >
             <Input />
          </Form.Item>
@@ -74,8 +83,9 @@ const Registration: React.FC = () => {
             rules={[
                { required: true, message: 'Введите пароль!' },
                { min: 8, message: 'Минимальное количество символов 8' },
-               { max: 16, message: 'Максимальное количество символов 16' },
-            ]}
+               { whitespace: true, message:'Пробел не допускается'},
+               { max: 16, message: 'Максимальное количество символов 16' },]}
+            hasFeedback
          >
             <Input.Password />
          </Form.Item>
