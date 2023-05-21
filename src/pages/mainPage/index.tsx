@@ -36,12 +36,10 @@ const MainPage = () => {
                         fontWeight: '700',
                         textDecoration: "none",
                         cursor: "pointer",
-
                         background: "#FFFFFF",
                         border: "1px solid #3BD855",
                         boxShadow: "-4px 4px 0px #3BD855",
                         marginRight: "58px",
-                        marginTop: "57px"
                     }}>
                         Вход
                     </Link>
@@ -56,10 +54,12 @@ const MainPage = () => {
                             fontWeight: '700',
                             textDecoration: "none",
                             cursor: "pointer",
+                            marginTop: "0",
 
                             background: "#FFFFFF",
                             border: "1px solid #3BD855",
                             boxShadow: "-4px 4px 0px #3BD855",
+                            marginLeft: "55px"
                         }}>
                             Регистрация
                         </Link>

@@ -1,7 +1,11 @@
 .MainPage {
     background-color: #EEFFDC;
     width: 100%;
-    /*height: 100vh;*/
+    height: 100vh;
+}
+
+.MainPageBotton  a {
+    margin-top: 0;
 }
 
 .container {

@@ -34,6 +34,7 @@ function App() {
           <Route path={"/client"} element={<ClientPage />} />
           <Route path={"/manual/:id"} element={<ManualPage />} />
           <Route path={"/test/:id"} element={<TestPage />} />
+
       </Routes>
   );
 }

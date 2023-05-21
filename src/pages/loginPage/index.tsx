@@ -1,7 +1,6 @@
 import Login from "../../components/login";
 import {Button, theme, Typography} from "antd";
 import {Content} from "antd/es/layout/layout";
-import {FooAPI} from "../../api/api";
 
 
 const LoginPage = () => {
