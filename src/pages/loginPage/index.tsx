@@ -9,15 +9,6 @@ const LoginPage = () => {
         token: { colorBgContainer },
     } = theme.useToken();
 
-    const check = async () => {
-        try {
-            const data = await FooAPI.foo();
-            console.log(data.data)
-        } catch (e) {
-            console.log(e)
-        }
-    }
-
     return (
         <>
             <Content style={{
@@ -34,7 +25,6 @@ const LoginPage = () => {
                     <Typography.Title>
                         Данные для входа
                     </Typography.Title>
-                    <Button onClick={check}>Проверить</Button>
                     <Login />
                 </div>
             </Content>

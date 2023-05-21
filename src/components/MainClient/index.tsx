@@ -1,10 +1,8 @@
 import React from 'react';
-import { Anchor, Breadcrumb, Layout, Menu, theme, Typography } from 'antd';
-import { MenuInfo } from 'rc-menu/lib/interface';
-import { Link } from "react-router-dom"
-import CreateTest from "../CreateTest";
+import {Layout, Menu, theme} from 'antd';
+import {MenuInfo} from 'rc-menu/lib/interface';
+import {Link} from "react-router-dom"
 import "./style.css";
-import CreateManual from '../CreateManual';
 import MyTests from "../MyTests";
 
 const { Header, Content, Footer } = Layout;

@@ -1,15 +1,34 @@
 import React from 'react';
-import { Button, Form, Input } from 'antd';
+import {Button, Form, Input, notification} from 'antd';
 import {useAppDispatch} from "../../hooks/useRedux";
-import {login} from "../../store/slices/auth/ActionCreators";
 import {LoginDto} from "../../dto/loginDto";
+import {useNavigate} from "react-router-dom";
 
 const Login: React.FC = () => {
     const dispatch = useAppDispatch();
 
+    const navigate = useNavigate();
+
+    const openNotification = () => {
+        notification.open({
+            message: 'Ошибка',
+            description:
+                'Неправильный логин или пароль',
+            onClick: () => {
+                console.log('Notification Clicked!');
+            },
+        });
+    };
 
     const onFinish = (values: LoginDto) => {
-        dispatch(login(values))
+        if (values.login === "admin" && values.password === "admin") {
+            navigate("/admin");
+        } else if (values.login === "ivan45" && values.password === "ivan45") {
+            navigate("/client");
+        } else {
+            openNotification()
+        }
+        // dispatch(login(values))
         console.log('Success:', values);
     };
 

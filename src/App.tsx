@@ -9,6 +9,7 @@ import AdminPage from "./pages/adminPage";
 import ClientPage from "./pages/clientPage";
 import ManualPage from "./pages/manualPage";
 import MainPage from "./pages/mainPage";
+import TestPage from "./pages/testPage";
 
 function App() {
   const { isLoading } = useAppSelector(state => state.auth)
@@ -32,6 +33,7 @@ function App() {
           <Route path={"/admin"} element={<AdminPage />} />
           <Route path={"/client"} element={<ClientPage />} />
           <Route path={"/manual/:id"} element={<ManualPage />} />
+          <Route path={"/test/:id"} element={<TestPage />} />
       </Routes>
   );
 }

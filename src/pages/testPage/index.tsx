@@ -1,8 +1,9 @@
 import React from 'react';
-import {Button, Card, Layout, Menu, theme} from 'antd';
-import {Link, useNavigate} from "react-router-dom";
+import {Card, Layout, Menu, theme} from 'antd';
+import {Link} from "react-router-dom";
 import {MenuInfo} from 'rc-menu/lib/interface';
 import "../../components/MainAdmin/style.css";
+import TestClient from "../../components/TestClient";
 
 const { Header, Content, Footer } = Layout;
 
@@ -10,14 +11,8 @@ const { Header, Content, Footer } = Layout;
 const { Meta } = Card;
 
 
-const ManualRead: React.FC = () => {
-    const [manualText, setManualText] = React.useState(`<div class="ql-editor" data-gramm="false" contenteditable="true"><h1 class="ql-align-center">Введение Что такое хирургия?</h1><p><br></p><p>Хирургия&nbsp;<em>(chier -&nbsp;</em>рука,<em>ergon -&nbsp;</em>действие) в переводе с греческого означает рукодействие, ремесло. Однако в настоящее время вряд ли хирургам понравится такое понимание их профессии. Хирург - это не только манипулятор. Для того чтобы решить, следует ли оперировать больного и какую операцию выполнить, хирург должен не менее тщательно, чем другие специалисты, изучить анамнез, оценить состояние больного, провести необходимое обследование. Если диагноз поставлен неточно, неправильно определены показания и противопоказания к операции, то даже великолепно выполненное хирургическое вмешательство не принесёт облегчения больному и может привести к нежелательному эффекту, а иногда и к гибели пациента. Кроме того, успех лечения определяется полноценной предоперационной подготовкой и адекватным лечением в послеоперационном периоде, для чего необходимы знания по внутренним болезням, клинической фармакологии и другим наукам, требуется умение распознать осложнения и бороться с ними.</p><p><br></p></div>`);
-
-    const navigate = useNavigate();
-
-    const locationCheck = () => {
-        navigate("/test/3")
-    }
+const TestPage: React.FC = () => {
+    const [manualText, setManualText] = React.useState(`<h1>Тут будет текст</h1><p>еще какой то текст</p><p><br></p><p>список компетенций</p><ol><li>уметь работать с ножом</li><li>уметь резать кожу</li><li>уметь говорить больному что все будет хорошо</li></ol>`);
 
     const {
         token: { colorBgContainer },
@@ -67,7 +62,7 @@ const ManualRead: React.FC = () => {
                             borderRadius: '6px',
                             transition: '.2s ease-in-out',
                             marginRight: "5px"
-                        }} to='/client'>Вернуться к тестам</Link>
+                        }} to='/client'>Вернуться к материалам</Link>
                         <Link className='exitButton' style={{
                             color: '#66fc11',
                             backgroundColor: '#000',
@@ -93,14 +88,7 @@ const ManualRead: React.FC = () => {
                         {selectedMenu === "1" && (
                             <div
                             >
-                                <div
-                                    className={"preview"}
-                                    dangerouslySetInnerHTML={{__html: manualText}}
-                                />
-
-                                <Button onClick={locationCheck} style={{marginTop: "10px"}} type="primary" htmlType="submit">
-                                    Начать тестирование
-                                </Button>
+                                <TestClient />
                             </div>
                         )}
                     </div>
@@ -111,4 +99,4 @@ const ManualRead: React.FC = () => {
     )
 }
 
-export default ManualRead
+export default TestPage
