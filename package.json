@@ -2,9 +2,8 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3005/back",
-  "changeOrigin": true,
-  "secure": false,
+  "proxy": "http://localhost:3005",
+  "changeOrigin": true
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.14.1",
