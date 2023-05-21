@@ -31,8 +31,47 @@ export const AuthAPI = {
     }
 }
 
-export const FooAPI = {
-    foo: async () => {
-        return $api.get<IAuthUser>('/hello')
+export const Test = {
+    get: async () => {
+        return $api.get<IAuthUser>('/test')
+    },
+    create: async (data: any) => {
+        return $api.post<IAuthUser>('/test', data)
+    },
+    delete: async (id: number) => {
+        return $api.delete<IAuthUser>('/test' + id)
+    },
+    update: async (data: any) => {
+        return $api.patch<IAuthUser>('/test', data)
+    },
+}
+
+export const Activity = {
+    get: async () => {
+        return $api.get<IAuthUser>('/activity')
+    },
+    create: async (data: any) => {
+        return $api.post<IAuthUser>('/activity', data)
+    },
+    delete: async (id: number) => {
+        return $api.delete<IAuthUser>('/activity' + id)
+    },
+    update: async (data: any) => {
+        return $api.patch<IAuthUser>('/activity', data)
+    },
+}
+
+export const Manual = {
+    get: async () => {
+        return $api.get<IAuthUser>('/manual')
+    },
+    create: async (data: any) => {
+        return $api.post<IAuthUser>('/manual', data)
+    },
+    delete: async (id: number) => {
+        return $api.delete<IAuthUser>('/manual' + id)
+    },
+    update: async (data: any) => {
+        return $api.patch<IAuthUser>('/manual', data)
     },
 }
