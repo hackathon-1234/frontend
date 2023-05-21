@@ -1,5 +1,6 @@
 import React from 'react';
-import {Button, Input, Radio, RadioChangeEvent, Space, Typography} from "antd";
+import {Button, Input, notification, Radio, RadioChangeEvent, Space, Typography} from "antd";
+import {useNavigate} from "react-router-dom";
 
 interface ITestData {
     name: string;
@@ -30,7 +31,8 @@ const testData: ITestData[] = [
         answers: [
             "Пластической",
             "Торакальной",
-            "Ишемической"
+            "Ишемической",
+            "Клинической"
         ]
     }
 ]
@@ -39,6 +41,8 @@ const TestClient: React.FC = () => {
     const [value, setValue] = React.useState();
     const [valueTwo, setValueTwo] = React.useState();
     const [valueThree, setValueThree] = React.useState();
+
+    const navigate = useNavigate();
 
     const onChange = (e: RadioChangeEvent) => {
         setValue(e.target.value);
@@ -52,6 +56,17 @@ const TestClient: React.FC = () => {
         setValueThree(e.target.value);
     }
 
+    const openNotification = () => {
+        notification.open({
+            message: 'Успешно',
+            description:
+                'Ожидайте обратной связи',
+            onClick: () => {
+                console.log('Notification Clicked!');
+            },
+        });
+        navigate("/client");
+    };
 
     return (
         <>
@@ -88,6 +103,7 @@ const TestClient: React.FC = () => {
                 <Button
                     type="primary"
                     style={{ marginTop: '10px' }}
+                    onClick={openNotification}
                     disabled={
                         typeof value !== "number" ||
                         typeof valueTwo !== "number" ||
