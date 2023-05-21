@@ -1,10 +1,11 @@
 import React from 'react';
-import {Layout, Menu, theme} from 'antd';
-import {MenuInfo} from 'rc-menu/lib/interface';
-import {Link} from "react-router-dom"
+import { Anchor, Breadcrumb, Layout, Menu, theme, Typography } from 'antd';
+import { MenuInfo } from 'rc-menu/lib/interface';
+import { Link } from "react-router-dom"
 import CreateTest from "../CreateTest";
 import "./style.css";
 import CreateManual from '../CreateManual';
+import MyTests from "../MyTests";
 
 const { Header, Content, Footer } = Layout;
 
@@ -44,11 +45,7 @@ const MainAdmin: React.FC = () => {
                     items={[
                         {
                             key: 1,
-                            label: "Добавить тест",
-                        },
-                        {
-                            key: 2,
-                            label: "Добавить материал"
+                            label: "Доступные материалы",
                         }
                     ]}
                 />
@@ -78,11 +75,10 @@ const MainAdmin: React.FC = () => {
                     borderRadius: '10px',
                     boxShadow: '18px 18px 36px #BCBCBC, -18px -18px 36px #FFFFFF'
                 }}>
-                    {selectedMenu === "1" && <CreateTest />}
-                    {selectedMenu === "2" && (<CreateManual />)}
-            </div>
-        </Content>
-    </Layout >
+                    {selectedMenu === "1" && <MyTests />}
+                </div>
+            </Content>
+        </Layout >
     );
 };
 

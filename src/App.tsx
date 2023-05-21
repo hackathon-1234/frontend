@@ -6,6 +6,8 @@ import {Route, Routes} from "react-router-dom";
 import LoginPage from "./pages/loginPage";
 import RegistrationPage from "./pages/registrationPage";
 import AdminPage from "./pages/adminPage";
+import ClientPage from "./pages/clientPage";
+import ManualPage from "./pages/manualPage";
 
 function App() {
   const { isLoading } = useAppSelector(state => state.auth)
@@ -27,6 +29,8 @@ function App() {
           <Route path={"/login"} element={<LoginPage />} />
           <Route path={"/registration"} element={<RegistrationPage />} />
           <Route path={"/admin"} element={<AdminPage />} />
+          <Route path={"/client"} element={<ClientPage />} />
+          <Route path={"/manual/:id"} element={<ManualPage />} />
       </Routes>
   );
 }
