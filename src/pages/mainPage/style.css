@@ -1,0 +1,31 @@
+.MainPage {
+    background-color: #EEFFDC;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1338px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.MainPageFirst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.MainPageTitle {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+    color: #000000;
+}
+
+.MainPageIcon {
+
+}
+
+.exitButton:hover {
+    color: #3BD855;
+}
